@@ -1,0 +1,13 @@
+.App {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.heading::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #002;
+  margin-top: 10px;
+} 

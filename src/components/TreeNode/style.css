@@ -1,0 +1,44 @@
+.node {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.node.folder {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.node.file {
+    width: fit-content;
+}
+.node-action-btns {
+  display: none;
+  gap: 4px;
+}
+
+.node.folder:hover .node-action-btns,
+.node.file:hover .node-action-btns {
+  display: flex;
+}
+.node-action-btn {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: small;
+    outline: none;
+    border: none;
+}
+
+.name-input-submit-btn {
+  color: green;
+  background: none;
+}
+
+.name-input-cancel-btn {
+  color: rgb(206, 0, 0);
+  background: none;
+}
