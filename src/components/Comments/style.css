@@ -79,12 +79,12 @@ textarea[name="reply-input"] {
 }
 
 @media screen and (max-width: 768px) {
-    .comment-form, .reply-input-btns {
+    .comment-form {
         width: 340px;
     }
 }
 @media screen and (max-width: 500px) {
-    .comment-form, .reply-input-btns {
+    .comment-form {
         width: 300px;
     }
 }
