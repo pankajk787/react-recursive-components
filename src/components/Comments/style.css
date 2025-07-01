@@ -40,3 +40,51 @@
     padding: 2px;
     cursor: pointer;
 }
+
+.comment-input-box {
+    margin: 20px 0;
+}
+
+.reply-input-btns {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: flex-end;
+}
+
+textarea[name="reply-input"] {
+    width: 100%;
+    padding: 10px;
+}
+
+.comment-form {
+    width: 500px;
+}
+
+.reply-input-btns {
+    width: calc(100% + 20px);
+}
+
+.btn.add-reply, .btn.edit-reply, .btn.add-comment, .btn.cancel {
+    padding: 5px 7px;
+}
+
+.btn.cancel {
+    background-color: rgb(243, 13, 13);
+    color: #fff;
+}
+
+.btn.btn.add-reply, .btn.edit-reply, .btn.add-comment {
+    background-color: rgb(2, 148, 2);
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .comment-form, .reply-input-btns {
+        width: 340px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .comment-form, .reply-input-btns {
+        width: 300px;
+    }
+}
