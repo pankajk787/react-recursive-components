@@ -42,7 +42,11 @@ const TreeNode = ({node, addNode, renameNode, deleteNode}) => {
             >
                 <span>{expanded ? '▼': '▶'} 📁</span>
                 {(nameInputStatus.open && nameInputStatus.action==='rename' && nameInputStatus.nodeId === node.id) ? 
-                  <NameInput action={nameInputStatus.action} defaultValue={node.name} onSubmit={onNameInputSubmit} onCancel={onNameInputCancel}/> : <span>{node.name}</span>}
+                  <NameInput action={nameInputStatus.action} defaultValue={node.name} onSubmit={onNameInputSubmit} onCancel={onNameInputCancel}/> : 
+                  <span onDoubleClick={(e) => {
+                    handleNameInputAction(node.id, 'rename');
+                    e.stopPropagation();
+                  }}>{node.name}</span>}
                 {
                   !nameInputStatus.open && 
                   <div className='node-action-btns'>
@@ -78,7 +82,11 @@ const TreeNode = ({node, addNode, renameNode, deleteNode}) => {
             <div className='node file'>
                 <span>📄</span>
                 {(nameInputStatus.open && nameInputStatus.action==='rename' && nameInputStatus.nodeId === node.id) ? 
-                  <NameInput action={nameInputStatus.action} defaultValue={node.name} onSubmit={onNameInputSubmit} onCancel={onNameInputCancel}/> : <span>{node.name}</span>}
+                  <NameInput action={nameInputStatus.action} defaultValue={node.name} onSubmit={onNameInputSubmit} onCancel={onNameInputCancel}/> : 
+                  <span onDoubleClick={(e) => {
+                    handleNameInputAction(node.id, 'rename');
+                    e.stopPropagation();
+                  }}>{node.name}</span>}
                 {
                   !nameInputStatus.open && 
                   <div className='node-action-btns'>
