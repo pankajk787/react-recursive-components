@@ -11,6 +11,9 @@
 # 2. Nested Comments & Replies
     Features:
     - Render Nested Comments & Replies
+    - Add Comments & Replies
+    - Delete and comments & replies
+    - Add likes and dislikes
 
 # Preview 
 ![Image](https://github.com/user-attachments/assets/f901cae7-92ff-4801-9b71-7cab0909e04f)
