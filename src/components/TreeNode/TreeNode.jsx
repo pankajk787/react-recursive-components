@@ -44,7 +44,7 @@ const TreeNode = ({node, addNode, renameNode, deleteNode}) => {
                 {(nameInputStatus.open && nameInputStatus.action==='rename' && nameInputStatus.nodeId === node.id) ? 
                   <NameInput action={nameInputStatus.action} defaultValue={node.name} onSubmit={onNameInputSubmit} onCancel={onNameInputCancel}/> : 
                   <span onDoubleClick={(e) => {
-                    handleNameInputAction(node.id, 'rename');
+                    !node.is_root && handleNameInputAction(node.id, 'rename');
                     e.stopPropagation();
                   }}>{node.name}</span>}
                 {
